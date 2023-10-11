@@ -1,0 +1,73 @@
+.button-nav {
+  background-image: url("@img/layout/nav-button.png");
+  height: 53px;
+  padding: 0 30px;
+  line-height: 44px;
+  text-align: center;
+  min-width: 164px;
+  float: left;
+  background-size: 100% 100%;
+  cursor: pointer;
+}
+.button-nav-active {
+  div {
+    color: #FFE500;
+  }
+  color: #FFE500;
+}
+.button-nav:hover {
+  div {
+    color: #FFE500;
+  }
+  color: #FFE500;
+}
+.button-default {
+  width: 305px;
+  height: 77px;
+  background-image: url("@img/components/button.png");
+  div {
+    width: 100%;
+    height: 77px;
+    display: flex;
+    justify-content: center;
+    line-height: 67px;
+    color: #F9E603;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  img {
+    width: 19px;
+    height: 21px;
+    margin-top: 26px;
+    margin-left: 26px;
+  }
+}
+.button-default:hover {
+  background-image: url("@img/components/button-hover.png");
+}
+.button-disabled {
+  pointer-events: none;
+  div {
+    color: #6D6D6D!important;
+  }
+}
+@keyframes loading-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.loading-box {
+  display: flex;
+  pointer-events: none;
+  align-items: center;
+  .load-img {
+    width: 40px;
+    height: 40px;
+    margin-left: unset;
+    margin-top: -6px;
+    animation: loading-spin 3s infinite linear;
+  }
+}

@@ -1,0 +1,58 @@
+.edit-container {
+  height: 1080px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 92px;
+  .navigation-container {
+    height: 106px;
+    padding: 12px 130px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .nav-box {
+      display: flex;
+      align-items: center;
+    }
+    .point-box {
+      background-image: url("@img/home/point-background.png");
+      width: 217px;
+      height: 66px;
+      line-height: 56px;
+      padding-right: 54px;
+      text-align: right;
+    }
+    .nav-item {
+      padding: 0 32px;
+      height: 54px;
+      line-height: 46px;
+      text-align: center;
+      background-image: url("@img/setout/nav-item-default.png");
+      font-size: 24px;
+    }
+    .arrow {
+      margin-right: 32px;
+      cursor: pointer;
+    }
+    .nav-item-active {
+      width: 296px;
+      height: 54px;
+      line-height: 46px;
+      text-align: center;
+      background-image: url("@img/setout/nav-item.png");
+      font-size: 24px;
+      color: #FFE500;
+    }
+    .no-active {
+      background-image: url("@img/setout/nav-item-default.png");
+      background-size: 100% 100%;
+    }
+    .connection {
+      margin-left: -16px;
+      margin-right: -16px;
+    }
+    .pie {
+      margin-left: -20px;
+    }
+  }
+}

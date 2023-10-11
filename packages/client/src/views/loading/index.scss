@@ -1,0 +1,115 @@
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.loading-container {
+  width: 1920px;
+  height: 1080px;
+  background-image: url("@img/loading/background.png");
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  .round-pie {
+    width: 3331px;
+    height: 3331px;
+    position: absolute;
+    left: -700px;
+    animation: spin 40s linear infinite;
+    background-image: url("@img/loading/round.png");
+  }
+  .progress-container {
+    width: 810px;
+    height: 36px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 800px;
+    background-image: url("@img/loading/progress.png");
+  }
+  .text-box {
+    position: absolute;
+    top: 500px;
+    left: 50%;
+    height: 100px;
+    transform: translateX(-50%);
+    .text-container {
+      margin: 0 auto;
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+      height: 190px;
+      display: flex;
+      align-items: center;
+      flex-direction: column-reverse;
+    }
+
+    .text-item {
+      font-size: 28px;
+      margin: 8px 0;
+      display: none;
+    }
+    .text-item-active {
+      animation-name: textAmit;
+      animation-duration: 3s;
+      //animation-delay: 0.5s;
+      display: block;
+    }
+    .rowup {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+    @keyframes textAmit {
+      0% {
+        transform: translateY(0);
+        display: block;
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100px);
+        opacity: 0;
+        display: none;
+      }
+    }
+  }
+  .progress-block-container {
+    width: 810px;
+    height: 36px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 800px;
+    .number-box {
+      width: 100%;
+      transition: 1s;
+      position: relative;
+      .number {
+        position: absolute;
+        right: 0;
+      }
+    }
+    .block {
+      width: 1%;
+      height: 36px;
+      border-radius: 16px;
+      background: linear-gradient(90deg, #008419 0.86%, #06FFDB 58.76%, #679AFE 97.71%);
+      box-shadow: 0px 4px 4px 0px #06FFDB inset;
+      position: relative;
+      transition: 1s;
+      &:after {
+        content: '';
+        position: absolute;
+        width: 77px;
+        height: 76px;
+        top: -57px;
+        right: 0;
+        background-image: url("@img/loading/avatar.png");
+        background-size: 100% 100%;
+      }
+    }
+  }
+}

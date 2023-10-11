@@ -1,0 +1,49 @@
+.nft-item {
+  width: 211px;
+  height: 262px;
+  background-image: url("@img/setout/life-item.png");
+  position: relative;
+  cursor: pointer;
+  transition: 1s;
+  .blood-volume {
+    width: 52px;
+    height: 52px;
+    text-align: center;
+    position: absolute;
+    right: 12px;
+    top: 22px;
+  }
+  .cover-container {
+    width: 140px;
+    height: 140px;
+    position: absolute;
+    left: 26px;
+    top: 44px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .token-id {
+    position: absolute;
+    width: 120px;
+    bottom: 42px;
+    left: 36px;
+    text-align: center;
+  }
+}
+.nft-item-active {
+  transform: translateY(-30px);
+  filter: drop-shadow(0px 0px 28px #06FFDB);
+  &:after {
+    content: '';
+    width: 83px;
+    height: 81px;
+    position: absolute;
+    background-size: 100% 100%;
+    left: 45.5%!important;
+    transform: translateX(-50%);
+    bottom: -80px;
+    background-image: url("@img/setout/triangle.png");
+  }
+}
